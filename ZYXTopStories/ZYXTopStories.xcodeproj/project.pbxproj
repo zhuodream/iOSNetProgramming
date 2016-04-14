@@ -1,0 +1,668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2704C0D01CBF70A50081D828 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C0CF1CBF70A50081D828 /* main.m */; };
+		2704C0D31CBF70A50081D828 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C0D21CBF70A50081D828 /* AppDelegate.m */; };
+		2704C0DB1CBF70A50081D828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2704C0DA1CBF70A50081D828 /* Assets.xcassets */; };
+		2704C0DE1CBF70A50081D828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2704C0DC1CBF70A50081D828 /* LaunchScreen.storyboard */; };
+		2704C0E91CBF70A50081D828 /* ZYXTopStoriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C0E81CBF70A50081D828 /* ZYXTopStoriesTests.m */; };
+		2704C0F41CBF70A50081D828 /* ZYXTopStoriesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C0F31CBF70A50081D828 /* ZYXTopStoriesUITests.m */; };
+		2704C1041CBF70D80081D828 /* ZYXPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C1031CBF70D80081D828 /* ZYXPost.m */; };
+		2704C1081CBF72270081D828 /* TopStoriesParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C1071CBF72270081D828 /* TopStoriesParser.m */; };
+		2704C10C1CBF768B0081D828 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C10B1CBF768B0081D828 /* Utils.m */; };
+		2704C10E1CBF78E60081D828 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2704C10D1CBF78E60081D828 /* libxml2.tbd */; };
+		2704C1121CBF875E0081D828 /* FetchTopStoriesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C1111CBF875E0081D828 /* FetchTopStoriesOperation.m */; };
+		2704C1151CBF87820081D828 /* BaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C1141CBF87820081D828 /* BaseOperation.m */; };
+		2704C1181CBF88D10081D828 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C1171CBF88D10081D828 /* Model.m */; };
+		2704C11C1CBF90D30081D828 /* TopStoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C11B1CBF90D30081D828 /* TopStoriesTableViewController.m */; };
+		2704C11F1CBF9BD30081D828 /* FetchPostContentOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C11E1CBF9BD30081D828 /* FetchPostContentOperation.m */; };
+		2704C1241CBF9ECB0081D828 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C1211CBF9ECB0081D828 /* HTMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2704C1251CBF9ECB0081D828 /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C1231CBF9ECB0081D828 /* HTMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2704C1281CBFA23B0081D828 /* PostViewContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C1271CBFA23B0081D828 /* PostViewContentViewController.m */; };
+		2704C12B1CBFAF050081D828 /* BrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C12A1CBFAF050081D828 /* BrowserViewController.m */; };
+		2704C12E1CBFBD8A0081D828 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C12D1CBFBD8A0081D828 /* Tweet.m */; };
+		2704C1311CBFBEB50081D828 /* FetchTweetProfileImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C1301CBFBEB50081D828 /* FetchTweetProfileImageOperation.m */; };
+		2704C1341CBFC07A0081D828 /* FetchPostTweetsOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C1331CBFC07A0081D828 /* FetchPostTweetsOperation.m */; };
+		2704C1371CBFC5990081D828 /* TweetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C1361CBFC5990081D828 /* TweetsTableViewController.m */; };
+		2704C13C1CBFCFD70081D828 /* ShareArticlesOperationJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C1391CBFCFD70081D828 /* ShareArticlesOperationJSON.m */; };
+		2704C13D1CBFCFD70081D828 /* ShareArticlesOperationXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C13B1CBFCFD70081D828 /* ShareArticlesOperationXML.m */; };
+		2704C1401CBFD1A50081D828 /* ShareTopStoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2704C13F1CBFD1A50081D828 /* ShareTopStoriesTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2704C0E51CBF70A50081D828 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2704C0C31CBF70A50081D828 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2704C0CA1CBF70A50081D828;
+			remoteInfo = ZYXTopStories;
+		};
+		2704C0F01CBF70A50081D828 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2704C0C31CBF70A50081D828 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2704C0CA1CBF70A50081D828;
+			remoteInfo = ZYXTopStories;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2704C0CB1CBF70A50081D828 /* ZYXTopStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYXTopStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2704C0CF1CBF70A50081D828 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2704C0D11CBF70A50081D828 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2704C0D21CBF70A50081D828 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2704C0DA1CBF70A50081D828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2704C0DD1CBF70A50081D828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2704C0DF1CBF70A50081D828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2704C0E41CBF70A50081D828 /* ZYXTopStoriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYXTopStoriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2704C0E81CBF70A50081D828 /* ZYXTopStoriesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYXTopStoriesTests.m; sourceTree = "<group>"; };
+		2704C0EA1CBF70A50081D828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2704C0EF1CBF70A50081D828 /* ZYXTopStoriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYXTopStoriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2704C0F31CBF70A50081D828 /* ZYXTopStoriesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYXTopStoriesUITests.m; sourceTree = "<group>"; };
+		2704C0F51CBF70A50081D828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2704C1021CBF70D80081D828 /* ZYXPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYXPost.h; sourceTree = "<group>"; };
+		2704C1031CBF70D80081D828 /* ZYXPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYXPost.m; sourceTree = "<group>"; };
+		2704C1061CBF72270081D828 /* TopStoriesParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopStoriesParser.h; sourceTree = "<group>"; };
+		2704C1071CBF72270081D828 /* TopStoriesParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopStoriesParser.m; sourceTree = "<group>"; };
+		2704C10A1CBF768B0081D828 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		2704C10B1CBF768B0081D828 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		2704C10D1CBF78E60081D828 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		2704C1101CBF875E0081D828 /* FetchTopStoriesOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchTopStoriesOperation.h; sourceTree = "<group>"; };
+		2704C1111CBF875E0081D828 /* FetchTopStoriesOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchTopStoriesOperation.m; sourceTree = "<group>"; };
+		2704C1131CBF87820081D828 /* BaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseOperation.h; sourceTree = "<group>"; };
+		2704C1141CBF87820081D828 /* BaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseOperation.m; sourceTree = "<group>"; };
+		2704C1161CBF88D10081D828 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		2704C1171CBF88D10081D828 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		2704C11A1CBF90D30081D828 /* TopStoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopStoriesTableViewController.h; sourceTree = "<group>"; };
+		2704C11B1CBF90D30081D828 /* TopStoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopStoriesTableViewController.m; sourceTree = "<group>"; };
+		2704C11D1CBF9BD30081D828 /* FetchPostContentOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchPostContentOperation.h; sourceTree = "<group>"; };
+		2704C11E1CBF9BD30081D828 /* FetchPostContentOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchPostContentOperation.m; sourceTree = "<group>"; };
+		2704C1201CBF9ECB0081D828 /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		2704C1211CBF9ECB0081D828 /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		2704C1221CBF9ECB0081D828 /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		2704C1231CBF9ECB0081D828 /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
+		2704C1261CBFA23B0081D828 /* PostViewContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewContentViewController.h; sourceTree = "<group>"; };
+		2704C1271CBFA23B0081D828 /* PostViewContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewContentViewController.m; sourceTree = "<group>"; };
+		2704C1291CBFAF050081D828 /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
+		2704C12A1CBFAF050081D828 /* BrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowserViewController.m; sourceTree = "<group>"; };
+		2704C12C1CBFBD8A0081D828 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
+		2704C12D1CBFBD8A0081D828 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
+		2704C12F1CBFBEB50081D828 /* FetchTweetProfileImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchTweetProfileImageOperation.h; sourceTree = "<group>"; };
+		2704C1301CBFBEB50081D828 /* FetchTweetProfileImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchTweetProfileImageOperation.m; sourceTree = "<group>"; };
+		2704C1321CBFC07A0081D828 /* FetchPostTweetsOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchPostTweetsOperation.h; sourceTree = "<group>"; };
+		2704C1331CBFC07A0081D828 /* FetchPostTweetsOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchPostTweetsOperation.m; sourceTree = "<group>"; };
+		2704C1351CBFC5990081D828 /* TweetsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsTableViewController.h; sourceTree = "<group>"; };
+		2704C1361CBFC5990081D828 /* TweetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsTableViewController.m; sourceTree = "<group>"; };
+		2704C1381CBFCFD70081D828 /* ShareArticlesOperationJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareArticlesOperationJSON.h; sourceTree = "<group>"; };
+		2704C1391CBFCFD70081D828 /* ShareArticlesOperationJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareArticlesOperationJSON.m; sourceTree = "<group>"; };
+		2704C13A1CBFCFD70081D828 /* ShareArticlesOperationXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareArticlesOperationXML.h; sourceTree = "<group>"; };
+		2704C13B1CBFCFD70081D828 /* ShareArticlesOperationXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareArticlesOperationXML.m; sourceTree = "<group>"; };
+		2704C13E1CBFD1A50081D828 /* ShareTopStoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareTopStoriesTableViewController.h; sourceTree = "<group>"; };
+		2704C13F1CBFD1A50081D828 /* ShareTopStoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareTopStoriesTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2704C0C81CBF70A50081D828 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2704C10E1CBF78E60081D828 /* libxml2.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2704C0E11CBF70A50081D828 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2704C0EC1CBF70A50081D828 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2704C0C21CBF70A50081D828 = {
+			isa = PBXGroup;
+			children = (
+				2704C10D1CBF78E60081D828 /* libxml2.tbd */,
+				2704C0CD1CBF70A50081D828 /* ZYXTopStories */,
+				2704C0E71CBF70A50081D828 /* ZYXTopStoriesTests */,
+				2704C0F21CBF70A50081D828 /* ZYXTopStoriesUITests */,
+				2704C0CC1CBF70A50081D828 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2704C0CC1CBF70A50081D828 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2704C0CB1CBF70A50081D828 /* ZYXTopStories.app */,
+				2704C0E41CBF70A50081D828 /* ZYXTopStoriesTests.xctest */,
+				2704C0EF1CBF70A50081D828 /* ZYXTopStoriesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2704C0CD1CBF70A50081D828 /* ZYXTopStories */ = {
+			isa = PBXGroup;
+			children = (
+				2704C0D11CBF70A50081D828 /* AppDelegate.h */,
+				2704C0D21CBF70A50081D828 /* AppDelegate.m */,
+				2704C0DA1CBF70A50081D828 /* Assets.xcassets */,
+				2704C0DC1CBF70A50081D828 /* LaunchScreen.storyboard */,
+				2704C0DF1CBF70A50081D828 /* Info.plist */,
+				2704C1191CBF903F0081D828 /* UI */,
+				2704C10F1CBF873C0081D828 /* Operations */,
+				2704C1011CBF70C50081D828 /* Model */,
+				2704C1051CBF72090081D828 /* Parsers */,
+				2704C1091CBF76760081D828 /* Tools */,
+				2704C0CE1CBF70A50081D828 /* Supporting Files */,
+			);
+			path = ZYXTopStories;
+			sourceTree = "<group>";
+		};
+		2704C0CE1CBF70A50081D828 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2704C0CF1CBF70A50081D828 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2704C0E71CBF70A50081D828 /* ZYXTopStoriesTests */ = {
+			isa = PBXGroup;
+			children = (
+				2704C0E81CBF70A50081D828 /* ZYXTopStoriesTests.m */,
+				2704C0EA1CBF70A50081D828 /* Info.plist */,
+			);
+			path = ZYXTopStoriesTests;
+			sourceTree = "<group>";
+		};
+		2704C0F21CBF70A50081D828 /* ZYXTopStoriesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2704C0F31CBF70A50081D828 /* ZYXTopStoriesUITests.m */,
+				2704C0F51CBF70A50081D828 /* Info.plist */,
+			);
+			path = ZYXTopStoriesUITests;
+			sourceTree = "<group>";
+		};
+		2704C1011CBF70C50081D828 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2704C1021CBF70D80081D828 /* ZYXPost.h */,
+				2704C1031CBF70D80081D828 /* ZYXPost.m */,
+				2704C1161CBF88D10081D828 /* Model.h */,
+				2704C1171CBF88D10081D828 /* Model.m */,
+				2704C12C1CBFBD8A0081D828 /* Tweet.h */,
+				2704C12D1CBFBD8A0081D828 /* Tweet.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2704C1051CBF72090081D828 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				2704C1201CBF9ECB0081D828 /* HTMLNode.h */,
+				2704C1211CBF9ECB0081D828 /* HTMLNode.m */,
+				2704C1221CBF9ECB0081D828 /* HTMLParser.h */,
+				2704C1231CBF9ECB0081D828 /* HTMLParser.m */,
+				2704C1061CBF72270081D828 /* TopStoriesParser.h */,
+				2704C1071CBF72270081D828 /* TopStoriesParser.m */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		2704C1091CBF76760081D828 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				2704C10A1CBF768B0081D828 /* Utils.h */,
+				2704C10B1CBF768B0081D828 /* Utils.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		2704C10F1CBF873C0081D828 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				2704C1381CBFCFD70081D828 /* ShareArticlesOperationJSON.h */,
+				2704C1391CBFCFD70081D828 /* ShareArticlesOperationJSON.m */,
+				2704C13A1CBFCFD70081D828 /* ShareArticlesOperationXML.h */,
+				2704C13B1CBFCFD70081D828 /* ShareArticlesOperationXML.m */,
+				2704C1101CBF875E0081D828 /* FetchTopStoriesOperation.h */,
+				2704C1111CBF875E0081D828 /* FetchTopStoriesOperation.m */,
+				2704C1131CBF87820081D828 /* BaseOperation.h */,
+				2704C1141CBF87820081D828 /* BaseOperation.m */,
+				2704C11D1CBF9BD30081D828 /* FetchPostContentOperation.h */,
+				2704C11E1CBF9BD30081D828 /* FetchPostContentOperation.m */,
+				2704C12F1CBFBEB50081D828 /* FetchTweetProfileImageOperation.h */,
+				2704C1301CBFBEB50081D828 /* FetchTweetProfileImageOperation.m */,
+				2704C1321CBFC07A0081D828 /* FetchPostTweetsOperation.h */,
+				2704C1331CBFC07A0081D828 /* FetchPostTweetsOperation.m */,
+			);
+			name = Operations;
+			sourceTree = "<group>";
+		};
+		2704C1191CBF903F0081D828 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2704C13E1CBFD1A50081D828 /* ShareTopStoriesTableViewController.h */,
+				2704C13F1CBFD1A50081D828 /* ShareTopStoriesTableViewController.m */,
+				2704C1351CBFC5990081D828 /* TweetsTableViewController.h */,
+				2704C1361CBFC5990081D828 /* TweetsTableViewController.m */,
+				2704C1291CBFAF050081D828 /* BrowserViewController.h */,
+				2704C12A1CBFAF050081D828 /* BrowserViewController.m */,
+				2704C11A1CBF90D30081D828 /* TopStoriesTableViewController.h */,
+				2704C11B1CBF90D30081D828 /* TopStoriesTableViewController.m */,
+				2704C1261CBFA23B0081D828 /* PostViewContentViewController.h */,
+				2704C1271CBFA23B0081D828 /* PostViewContentViewController.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2704C0CA1CBF70A50081D828 /* ZYXTopStories */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2704C0F81CBF70A50081D828 /* Build configuration list for PBXNativeTarget "ZYXTopStories" */;
+			buildPhases = (
+				2704C0C71CBF70A50081D828 /* Sources */,
+				2704C0C81CBF70A50081D828 /* Frameworks */,
+				2704C0C91CBF70A50081D828 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZYXTopStories;
+			productName = ZYXTopStories;
+			productReference = 2704C0CB1CBF70A50081D828 /* ZYXTopStories.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2704C0E31CBF70A50081D828 /* ZYXTopStoriesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2704C0FB1CBF70A50081D828 /* Build configuration list for PBXNativeTarget "ZYXTopStoriesTests" */;
+			buildPhases = (
+				2704C0E01CBF70A50081D828 /* Sources */,
+				2704C0E11CBF70A50081D828 /* Frameworks */,
+				2704C0E21CBF70A50081D828 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2704C0E61CBF70A50081D828 /* PBXTargetDependency */,
+			);
+			name = ZYXTopStoriesTests;
+			productName = ZYXTopStoriesTests;
+			productReference = 2704C0E41CBF70A50081D828 /* ZYXTopStoriesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2704C0EE1CBF70A50081D828 /* ZYXTopStoriesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2704C0FE1CBF70A50081D828 /* Build configuration list for PBXNativeTarget "ZYXTopStoriesUITests" */;
+			buildPhases = (
+				2704C0EB1CBF70A50081D828 /* Sources */,
+				2704C0EC1CBF70A50081D828 /* Frameworks */,
+				2704C0ED1CBF70A50081D828 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2704C0F11CBF70A50081D828 /* PBXTargetDependency */,
+			);
+			name = ZYXTopStoriesUITests;
+			productName = ZYXTopStoriesUITests;
+			productReference = 2704C0EF1CBF70A50081D828 /* ZYXTopStoriesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2704C0C31CBF70A50081D828 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "卓酉鑫";
+				TargetAttributes = {
+					2704C0CA1CBF70A50081D828 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 863XF2ER6H;
+					};
+					2704C0E31CBF70A50081D828 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 863XF2ER6H;
+						TestTargetID = 2704C0CA1CBF70A50081D828;
+					};
+					2704C0EE1CBF70A50081D828 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 863XF2ER6H;
+						TestTargetID = 2704C0CA1CBF70A50081D828;
+					};
+				};
+			};
+			buildConfigurationList = 2704C0C61CBF70A50081D828 /* Build configuration list for PBXProject "ZYXTopStories" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2704C0C21CBF70A50081D828;
+			productRefGroup = 2704C0CC1CBF70A50081D828 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2704C0CA1CBF70A50081D828 /* ZYXTopStories */,
+				2704C0E31CBF70A50081D828 /* ZYXTopStoriesTests */,
+				2704C0EE1CBF70A50081D828 /* ZYXTopStoriesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2704C0C91CBF70A50081D828 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2704C0DE1CBF70A50081D828 /* LaunchScreen.storyboard in Resources */,
+				2704C0DB1CBF70A50081D828 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2704C0E21CBF70A50081D828 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2704C0ED1CBF70A50081D828 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2704C0C71CBF70A50081D828 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2704C1041CBF70D80081D828 /* ZYXPost.m in Sources */,
+				2704C1251CBF9ECB0081D828 /* HTMLParser.m in Sources */,
+				2704C13C1CBFCFD70081D828 /* ShareArticlesOperationJSON.m in Sources */,
+				2704C1341CBFC07A0081D828 /* FetchPostTweetsOperation.m in Sources */,
+				2704C1371CBFC5990081D828 /* TweetsTableViewController.m in Sources */,
+				2704C1281CBFA23B0081D828 /* PostViewContentViewController.m in Sources */,
+				2704C13D1CBFCFD70081D828 /* ShareArticlesOperationXML.m in Sources */,
+				2704C1121CBF875E0081D828 /* FetchTopStoriesOperation.m in Sources */,
+				2704C11F1CBF9BD30081D828 /* FetchPostContentOperation.m in Sources */,
+				2704C1181CBF88D10081D828 /* Model.m in Sources */,
+				2704C1241CBF9ECB0081D828 /* HTMLNode.m in Sources */,
+				2704C0D31CBF70A50081D828 /* AppDelegate.m in Sources */,
+				2704C10C1CBF768B0081D828 /* Utils.m in Sources */,
+				2704C0D01CBF70A50081D828 /* main.m in Sources */,
+				2704C11C1CBF90D30081D828 /* TopStoriesTableViewController.m in Sources */,
+				2704C12B1CBFAF050081D828 /* BrowserViewController.m in Sources */,
+				2704C1311CBFBEB50081D828 /* FetchTweetProfileImageOperation.m in Sources */,
+				2704C12E1CBFBD8A0081D828 /* Tweet.m in Sources */,
+				2704C1151CBF87820081D828 /* BaseOperation.m in Sources */,
+				2704C1081CBF72270081D828 /* TopStoriesParser.m in Sources */,
+				2704C1401CBFD1A50081D828 /* ShareTopStoriesTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2704C0E01CBF70A50081D828 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2704C0E91CBF70A50081D828 /* ZYXTopStoriesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2704C0EB1CBF70A50081D828 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2704C0F41CBF70A50081D828 /* ZYXTopStoriesUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2704C0E61CBF70A50081D828 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2704C0CA1CBF70A50081D828 /* ZYXTopStories */;
+			targetProxy = 2704C0E51CBF70A50081D828 /* PBXContainerItemProxy */;
+		};
+		2704C0F11CBF70A50081D828 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2704C0CA1CBF70A50081D828 /* ZYXTopStories */;
+			targetProxy = 2704C0F01CBF70A50081D828 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2704C0DC1CBF70A50081D828 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2704C0DD1CBF70A50081D828 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2704C0F61CBF70A50081D828 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2704C0F71CBF70A50081D828 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2704C0F91CBF70A50081D828 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = ZYXTopStories/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amzgame.ZYXTopStories;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2704C0FA1CBF70A50081D828 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = ZYXTopStories/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amzgame.ZYXTopStories;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2704C0FC1CBF70A50081D828 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZYXTopStoriesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amzgame.ZYXTopStoriesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYXTopStories.app/ZYXTopStories";
+			};
+			name = Debug;
+		};
+		2704C0FD1CBF70A50081D828 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZYXTopStoriesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amzgame.ZYXTopStoriesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYXTopStories.app/ZYXTopStories";
+			};
+			name = Release;
+		};
+		2704C0FF1CBF70A50081D828 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZYXTopStoriesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amzgame.ZYXTopStoriesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZYXTopStories;
+			};
+			name = Debug;
+		};
+		2704C1001CBF70A50081D828 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZYXTopStoriesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amzgame.ZYXTopStoriesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZYXTopStories;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2704C0C61CBF70A50081D828 /* Build configuration list for PBXProject "ZYXTopStories" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2704C0F61CBF70A50081D828 /* Debug */,
+				2704C0F71CBF70A50081D828 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2704C0F81CBF70A50081D828 /* Build configuration list for PBXNativeTarget "ZYXTopStories" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2704C0F91CBF70A50081D828 /* Debug */,
+				2704C0FA1CBF70A50081D828 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2704C0FB1CBF70A50081D828 /* Build configuration list for PBXNativeTarget "ZYXTopStoriesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2704C0FC1CBF70A50081D828 /* Debug */,
+				2704C0FD1CBF70A50081D828 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2704C0FE1CBF70A50081D828 /* Build configuration list for PBXNativeTarget "ZYXTopStoriesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2704C0FF1CBF70A50081D828 /* Debug */,
+				2704C1001CBF70A50081D828 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2704C0C31CBF70A50081D828 /* Project object */;
+}
