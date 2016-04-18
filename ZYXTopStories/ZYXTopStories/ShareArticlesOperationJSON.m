@@ -40,6 +40,7 @@
         // that creates an NSDictionary of a few key fields
         [articles addObject:post.dictionaryRepresentation];
     }
+    NSLog(@"articles = %@", articles);
     NSDictionary *articleData = 
     [NSDictionary dictionaryWithObject:articles forKey:@"articles"];
     
