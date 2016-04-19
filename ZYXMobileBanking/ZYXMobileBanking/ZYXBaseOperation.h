@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Constants.h"
 #import "ZYXModel.h"
+#import "Utils.h"
 
-
-#define kResourceBaseURL    @"http://192.168.1.90/chapter6"
+#define kResourceBaseURL    @"http://localhost/chapter6"
 
 @interface ZYXBaseOperation : NSOperation <NSCopying>
 

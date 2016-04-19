@@ -27,7 +27,7 @@
 
 - (void)transferFundsFromAccount:(NSString *)fromAccount toAccount:(NSString *)toAccount effectiveDate:(NSDate *)transferDate withAmount:(double)amount andNotes:(NSString *)notes;
 
-- (NSArray *)vaildProtectionSpaces;
+- (NSArray *)validProtectionSpaces;
 - (NSURLProtectionSpace *)clientCerficateProtectionSpace;
 
 @end

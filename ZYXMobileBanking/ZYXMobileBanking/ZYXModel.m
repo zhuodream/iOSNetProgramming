@@ -71,6 +71,35 @@
     [operation enqueueOperation];
 }
 
+- (void)authenticateWithCertificateAndPin:(NSString *)pin
+{
+    
+}
+
+- (NSArray *)validProtectionSpaces
+{
+    // valid supported protection spaces
+    NSURLProtectionSpace *defaultSpace = [[NSURLProtectionSpace alloc] initWithHost:@"localhost/user"
+                                                                               port:443
+                                                                           protocol:NSURLProtectionSpaceHTTPS
+                                                                              realm:@"mobile"
+                                                               authenticationMethod:NSURLAuthenticationMethodDefault];
+    
+    NSURLProtectionSpace *trustSpace = [[NSURLProtectionSpace alloc] initWithHost:@"localhost/user"
+                                                                             port:443
+                                                                         protocol:NSURLProtectionSpaceHTTPS
+                                                                            realm:@"mobile"
+                                                             authenticationMethod:NSURLAuthenticationMethodServerTrust];
+    
+    NSURLProtectionSpace *certSpace = [[NSURLProtectionSpace alloc] initWithHost:@"localhost/user"
+                                                                            port:443
+                                                                        protocol:NSURLProtectionSpaceHTTPS
+                                                                           realm:nil
+                                                            authenticationMethod:NSURLAuthenticationMethodClientCertificate];
+    
+    return [NSArray arrayWithObjects:defaultSpace, trustSpace, certSpace, nil];
+}
+
 - (void)fetchAccounts
 {
     
@@ -96,6 +125,13 @@
     }
     
     return NO;
+}
+
+- (NSURLProtectionSpace *)clientCerficateProtectionSpace
+{
+    NSURLProtectionSpace *certSpace = [[NSURLProtectionSpace alloc] initWithHost:@"localhost" port:443 protocol:NSURLProtectionSpaceHTTPS realm:@"" authenticationMethod:NSURLAuthenticationMethodClientCertificate];
+    
+    return certSpace;
 }
 
 

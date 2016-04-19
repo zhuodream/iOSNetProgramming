@@ -133,11 +133,23 @@ static BOOL kZXYOperationInProcess = NO;
         if (self.registerDevice)
         {
             NSString *certString = [response objectForKey:@"certificate"];
-            NSLog(@"certString = %@", certString);
             NSData *certData = [[NSData alloc] initWithBase64EncodedString:certString options:0];
-            NSLog(@"data = %@", certData);
             
+            SecIdentityRef identity = NULL;
+            SecCertificateRef certificate = NULL;
+            [Utils identity:&identity andCertificate:&certificate fromPKS12Data:certData withPassphrase:self.passphrased];
             
+            if (identity != NULL)
+            {
+                //store the certificate and identify in the keychain
+                NSArray *certArray = [NSArray arrayWithObject:(__bridge id)certificate];
+                NSURLCredential *credential = [NSURLCredential credentialWithIdentity:identity certificates:certArray persistence:NSURLCredentialPersistencePermanent];
+                
+                [[NSURLCredentialStorage sharedCredentialStorage] setDefaultCredential:credential forProtectionSpace:[[ZYXModel sharedModel] clientCerficateProtectionSpace]];
+                
+                //store the register flag
+                [[ZYXModel sharedModel] registerDevice];
+            }
         }
         
         [[ZYXModel sharedModel] fetchAccounts];

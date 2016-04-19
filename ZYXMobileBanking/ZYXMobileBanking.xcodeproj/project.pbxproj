@@ -14,6 +14,9 @@
 		2707645D1CC60EEA0005E783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2707645B1CC60EEA0005E783 /* LaunchScreen.storyboard */; };
 		270764681CC60EEA0005E783 /* ZYXMobileBankingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 270764671CC60EEA0005E783 /* ZYXMobileBankingTests.m */; };
 		270764731CC60EEA0005E783 /* ZYXMobileBankingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 270764721CC60EEA0005E783 /* ZYXMobileBankingUITests.m */; };
+		270DCE471CC67A1600A19930 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 270DCE461CC67A1600A19930 /* Utils.m */; };
+		270DCE491CC69D3400A19930 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DCE481CC69D3400A19930 /* Security.framework */; };
+		270DCE4C1CC69F2000A19930 /* ZYXCertificateAuthenticateOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 270DCE4B1CC69F2000A19930 /* ZYXCertificateAuthenticateOperation.m */; };
 		274C6BB51CC6126800665C0D /* ZYXModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 274C6BB41CC6126800665C0D /* ZYXModel.m */; };
 		274C6BB81CC6167A00665C0D /* ZYXBaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 274C6BB71CC6167A00665C0D /* ZYXBaseOperation.m */; };
 		274C6BBB1CC61DD000665C0D /* ZYXAuthenticateOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 274C6BBA1CC61DD000665C0D /* ZYXAuthenticateOperation.m */; };
@@ -57,6 +60,11 @@
 		270764721CC60EEA0005E783 /* ZYXMobileBankingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYXMobileBankingUITests.m; sourceTree = "<group>"; };
 		270764741CC60EEA0005E783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		270764871CC60FE60005E783 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		270DCE451CC67A1600A19930 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		270DCE461CC67A1600A19930 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		270DCE481CC69D3400A19930 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		270DCE4A1CC69F2000A19930 /* ZYXCertificateAuthenticateOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYXCertificateAuthenticateOperation.h; sourceTree = "<group>"; };
+		270DCE4B1CC69F2000A19930 /* ZYXCertificateAuthenticateOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYXCertificateAuthenticateOperation.m; sourceTree = "<group>"; };
 		274C6BB31CC6126800665C0D /* ZYXModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYXModel.h; sourceTree = "<group>"; };
 		274C6BB41CC6126800665C0D /* ZYXModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYXModel.m; sourceTree = "<group>"; };
 		274C6BB61CC6167A00665C0D /* ZYXBaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYXBaseOperation.h; sourceTree = "<group>"; };
@@ -78,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270DCE491CC69D3400A19930 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +110,7 @@
 		270764411CC60EEA0005E783 = {
 			isa = PBXGroup;
 			children = (
+				270DCE481CC69D3400A19930 /* Security.framework */,
 				2707644C1CC60EEA0005E783 /* ZYXMobileBanking */,
 				270764661CC60EEA0005E783 /* ZYXMobileBankingTests */,
 				270764711CC60EEA0005E783 /* ZYXMobileBankingUITests */,
@@ -130,6 +140,7 @@
 				2707645E1CC60EEA0005E783 /* Info.plist */,
 				274C6BBC1CC6291400665C0D /* UI */,
 				270764801CC60EFA0005E783 /* Model */,
+				270DCE441CC67A0400A19930 /* Utils */,
 				2707644D1CC60EEA0005E783 /* Supporting Files */,
 			);
 			path = ZYXMobileBanking;
@@ -179,6 +190,8 @@
 				274C6BB71CC6167A00665C0D /* ZYXBaseOperation.m */,
 				274C6BB91CC61DD000665C0D /* ZYXAuthenticateOperation.h */,
 				274C6BBA1CC61DD000665C0D /* ZYXAuthenticateOperation.m */,
+				270DCE4A1CC69F2000A19930 /* ZYXCertificateAuthenticateOperation.h */,
+				270DCE4B1CC69F2000A19930 /* ZYXCertificateAuthenticateOperation.m */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -198,6 +211,15 @@
 				274C6BB41CC6126800665C0D /* ZYXModel.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		270DCE441CC67A0400A19930 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				270DCE451CC67A1600A19930 /* Utils.h */,
+				270DCE461CC67A1600A19930 /* Utils.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		274C6BBC1CC6291400665C0D /* UI */ = {
@@ -355,6 +377,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				274C6BBB1CC61DD000665C0D /* ZYXAuthenticateOperation.m in Sources */,
+				270DCE471CC67A1600A19930 /* Utils.m in Sources */,
+				270DCE4C1CC69F2000A19930 /* ZYXCertificateAuthenticateOperation.m in Sources */,
 				270764551CC60EEA0005E783 /* ViewController.m in Sources */,
 				274C6BB51CC6126800665C0D /* ZYXModel.m in Sources */,
 				274C6BB81CC6167A00665C0D /* ZYXBaseOperation.m in Sources */,
