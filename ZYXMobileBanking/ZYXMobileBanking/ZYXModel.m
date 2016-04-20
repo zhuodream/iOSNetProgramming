@@ -8,6 +8,7 @@
 
 #import "ZYXModel.h"
 #import "ZYXAuthenticateOperation.h"
+#import "ZYXCertificateAuthenticateOperation.h"
 
 @interface ZYXModel ()
 
@@ -73,25 +74,27 @@
 
 - (void)authenticateWithCertificateAndPin:(NSString *)pin
 {
-    
+    ZYXCertificateAuthenticateOperation *operation = [[ZYXCertificateAuthenticateOperation alloc] init];
+    operation.pin = pin;
+    [operation enqueueOperation];
 }
 
 - (NSArray *)validProtectionSpaces
 {
     // valid supported protection spaces
-    NSURLProtectionSpace *defaultSpace = [[NSURLProtectionSpace alloc] initWithHost:@"localhost/user"
+    NSURLProtectionSpace *defaultSpace = [[NSURLProtectionSpace alloc] initWithHost:@"192.168.1.152"
                                                                                port:443
                                                                            protocol:NSURLProtectionSpaceHTTPS
                                                                               realm:@"mobile"
                                                                authenticationMethod:NSURLAuthenticationMethodDefault];
     
-    NSURLProtectionSpace *trustSpace = [[NSURLProtectionSpace alloc] initWithHost:@"localhost/user"
+    NSURLProtectionSpace *trustSpace = [[NSURLProtectionSpace alloc] initWithHost:@"192.168.1.152"
                                                                              port:443
                                                                          protocol:NSURLProtectionSpaceHTTPS
-                                                                            realm:@"mobile"
+                                                                            realm:nil
                                                              authenticationMethod:NSURLAuthenticationMethodServerTrust];
     
-    NSURLProtectionSpace *certSpace = [[NSURLProtectionSpace alloc] initWithHost:@"localhost/user"
+    NSURLProtectionSpace *certSpace = [[NSURLProtectionSpace alloc] initWithHost:@"192.168.1.152"
                                                                             port:443
                                                                         protocol:NSURLProtectionSpaceHTTPS
                                                                            realm:nil
@@ -129,7 +132,7 @@
 
 - (NSURLProtectionSpace *)clientCerficateProtectionSpace
 {
-    NSURLProtectionSpace *certSpace = [[NSURLProtectionSpace alloc] initWithHost:@"localhost" port:443 protocol:NSURLProtectionSpaceHTTPS realm:@"" authenticationMethod:NSURLAuthenticationMethodClientCertificate];
+    NSURLProtectionSpace *certSpace = [[NSURLProtectionSpace alloc] initWithHost:@"localhost" port:443 protocol:NSURLProtectionSpaceHTTPS realm:nil authenticationMethod:NSURLAuthenticationMethodClientCertificate];
     
     return certSpace;
 }

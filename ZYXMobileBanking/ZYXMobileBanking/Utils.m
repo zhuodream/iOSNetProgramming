@@ -7,7 +7,7 @@
 //
 
 #import "Utils.h"
-#import <Security/SecRandom.h>
+#import <Security/Security.h>
 
 @implementation Utils
 
@@ -26,7 +26,7 @@
     CFDictionaryRef importOptions = CFDictionaryCreate(NULL, keys, values, 1, NULL, NULL);
     
     //create array to store our import results
-    CFArrayRef items = CFArrayCreate(NULL, 0, 0, NULL);
+    CFArrayRef items = NULL;
     OSStatus pkcs12ImportStatus = SecPKCS12Import(importData, importOptions, &items);
     
     if (pkcs12ImportStatus == errSecSuccess)
@@ -35,11 +35,13 @@
         const void *tempIdentity = NULL;
         
         tempIdentity = CFDictionaryGetValue(identityAndTrust, kSecImportItemIdentity);
+        CFRetain(tempIdentity);
         *identity = (SecIdentityRef)tempIdentity;
         
         //从identity中提取证书信息
         SecCertificateRef tempCertificate = NULL;
         OSStatus certificateStatus = errSecSuccess;
+        //You should remember to release the memeory
         certificateStatus = SecIdentityCopyCertificate(*identity, &tempCertificate);
         *certificate = (SecCertificateRef)tempCertificate;
     }
@@ -49,10 +51,10 @@
         CFRelease(importOptions);
     }
     
-//    if (items)
-//    {
-//        CFRelease(items);
-//    }
+    if (items)
+    {
+        CFRelease(items);
+    }
 }
 
 @end

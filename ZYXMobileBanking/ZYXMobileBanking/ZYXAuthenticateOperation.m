@@ -112,6 +112,7 @@ static BOOL kZXYOperationInProcess = NO;
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
     NSLog(@"response = %@", [httpResponse allHeaderFields]);
     self.statusCode = httpResponse.statusCode;
+    NSLog(@"statusCode = %ld", self.statusCode);
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
@@ -149,6 +150,10 @@ static BOOL kZXYOperationInProcess = NO;
                 
                 //store the register flag
                 [[ZYXModel sharedModel] registerDevice];
+                
+                //clean up the CF Object
+                CFRelease(identity);
+                CFRelease(certificate);
             }
         }
         
@@ -170,6 +175,7 @@ static BOOL kZXYOperationInProcess = NO;
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     NSLog(@"加载失败");
+    NSLog(@"error = %@", [error localizedDescription]);
     dispatch_async(dispatch_get_main_queue(), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:kNormalLoginFailedNotification object:nil];
     });
@@ -198,6 +204,26 @@ static BOOL kZXYOperationInProcess = NO;
                 [[NSNotificationCenter defaultCenter] postNotificationName:kNormalLoginFailedNotification object:nil];
             });*/
         }
+    }
+    else
+    {
+        if (challenge.previousFailureCount == 0)
+        {
+            NSLog(@"请求认证");
+            NSURLCredential *creds = [[NSURLCredential alloc] initWithUser:self.username password:self.password persistence:NSURLCredentialPersistenceForSession];
+            
+            [challenge.sender useCredential:creds forAuthenticationChallenge:challenge];
+        }
+        else
+        {
+            [challenge.sender cancelAuthenticationChallenge:challenge];
+            //don't need this, the connection will call connection:didFailWithError
+            /*
+             dispatch_async(dispatch_get_main_queue(), ^{
+             [[NSNotificationCenter defaultCenter] postNotificationName:kNormalLoginFailedNotification object:nil];
+             });*/
+        }
+
     }
 }
 

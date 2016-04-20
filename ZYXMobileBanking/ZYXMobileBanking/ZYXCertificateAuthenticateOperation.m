@@ -62,7 +62,7 @@ static BOOL kZXYOperationInProcess = NO;
     });
     
     NSString *url = [kResourceBaseURL stringByAppendingFormat:@"%@&pin=%@", kEndpoint, self.pin];
-    
+    NSLog(@"url = %@", url);
     NSMutableURLRequest *request = [self buildRequestWithURL:url httpMethod:kHttpMethod payload:nil timeout:kOperationTimeout signingOption:ZYXRequestSigningOptionNone];
     
     self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
@@ -104,7 +104,7 @@ static BOOL kZXYOperationInProcess = NO;
 {
     self.responseData = [[NSMutableData alloc] init];
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-    NSLog(@"response = %@", [httpResponse allHeaderFields]);
+    NSLog(@"response = %@， code = %ld", [httpResponse allHeaderFields], httpResponse.statusCode);
     self.statusCode = httpResponse.statusCode;
 }
 
@@ -150,9 +150,10 @@ static BOOL kZXYOperationInProcess = NO;
 
 - (void)connection:(NSURLConnection *)connection willSendRequestForAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 {
-    
+    NSLog(@"需要证书验证");
     // validate that the authentication challenge came from a whitelisted protection space
     if (![[[ZYXModel sharedModel] validProtectionSpaces] containsObject:challenge.protectionSpace]) {
+        NSLog(@"不安全的连接");
         // dispatch alert view message to the main thread
         dispatch_async(dispatch_get_main_queue(), ^{
             [[[UIAlertView alloc] initWithTitle:@"Unsecure Connection"
@@ -168,7 +169,7 @@ static BOOL kZXYOperationInProcess = NO;
     
     // user the clients certificate
     if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodClientCertificate) {
-        
+        NSLog(@"开始证书验证");
         // proceed with authentication
         if (challenge.previousFailureCount == 0) {
             
@@ -198,10 +199,17 @@ static BOOL kZXYOperationInProcess = NO;
             
         }
     }
-    
-    // if nothing catches this challenge, attempt to connect without credentials
-    [challenge.sender continueWithoutCredentialForAuthenticationChallenge:challenge];
-
+    else if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust])
+    {
+        NSLog(@"信任服务器");
+        NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
+        [challenge.sender useCredential:credential forAuthenticationChallenge:challenge];
+    }
+    else
+    {
+        // if nothing catches this challenge, attempt to connect without credentials
+        [challenge.sender continueWithoutCredentialForAuthenticationChallenge:challenge];
+    }
 }
 
 @end

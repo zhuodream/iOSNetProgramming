@@ -11,7 +11,7 @@
 #import "ZYXModel.h"
 #import "Utils.h"
 
-#define kResourceBaseURL    @"http://localhost/chapter6"
+#define kResourceBaseURL    @"http://192.168.1.152/chapter6"
 
 @interface ZYXBaseOperation : NSOperation <NSCopying>
 

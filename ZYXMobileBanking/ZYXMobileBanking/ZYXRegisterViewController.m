@@ -140,6 +140,7 @@
 }
 
 - (void)loginErrorHandler:(NSNotification*)notification {
+    NSLog(@"收到失败通知");
     [[[UIAlertView alloc] initWithTitle:@"Login Failed"
                                 message:@"Unable to authenticate. Please try again."
                                delegate:nil
