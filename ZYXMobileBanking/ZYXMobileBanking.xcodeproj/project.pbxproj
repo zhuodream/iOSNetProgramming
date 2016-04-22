@@ -17,6 +17,9 @@
 		270DCE471CC67A1600A19930 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 270DCE461CC67A1600A19930 /* Utils.m */; };
 		270DCE491CC69D3400A19930 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DCE481CC69D3400A19930 /* Security.framework */; };
 		270DCE4C1CC69F2000A19930 /* ZYXCertificateAuthenticateOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 270DCE4B1CC69F2000A19930 /* ZYXCertificateAuthenticateOperation.m */; };
+		27201C661CCA0A0500E4D131 /* NSData+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 27201C611CCA0A0500E4D131 /* NSData+Encryption.m */; };
+		27201C671CCA0A0500E4D131 /* NSString+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 27201C631CCA0A0500E4D131 /* NSString+Encryption.m */; };
+		27201C681CCA0A0500E4D131 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 27201C651CCA0A0500E4D131 /* NSString+Hashing.m */; };
 		274C6BB51CC6126800665C0D /* ZYXModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 274C6BB41CC6126800665C0D /* ZYXModel.m */; };
 		274C6BB81CC6167A00665C0D /* ZYXBaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 274C6BB71CC6167A00665C0D /* ZYXBaseOperation.m */; };
 		274C6BBB1CC61DD000665C0D /* ZYXAuthenticateOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 274C6BBA1CC61DD000665C0D /* ZYXAuthenticateOperation.m */; };
@@ -65,6 +68,12 @@
 		270DCE481CC69D3400A19930 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		270DCE4A1CC69F2000A19930 /* ZYXCertificateAuthenticateOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYXCertificateAuthenticateOperation.h; sourceTree = "<group>"; };
 		270DCE4B1CC69F2000A19930 /* ZYXCertificateAuthenticateOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYXCertificateAuthenticateOperation.m; sourceTree = "<group>"; };
+		27201C601CCA0A0500E4D131 /* NSData+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encryption.h"; sourceTree = "<group>"; };
+		27201C611CCA0A0500E4D131 /* NSData+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encryption.m"; sourceTree = "<group>"; };
+		27201C621CCA0A0500E4D131 /* NSString+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encryption.h"; sourceTree = "<group>"; };
+		27201C631CCA0A0500E4D131 /* NSString+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encryption.m"; sourceTree = "<group>"; };
+		27201C641CCA0A0500E4D131 /* NSString+Hashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hashing.h"; sourceTree = "<group>"; };
+		27201C651CCA0A0500E4D131 /* NSString+Hashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hashing.m"; sourceTree = "<group>"; };
 		274C6BB31CC6126800665C0D /* ZYXModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYXModel.h; sourceTree = "<group>"; };
 		274C6BB41CC6126800665C0D /* ZYXModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYXModel.m; sourceTree = "<group>"; };
 		274C6BB61CC6167A00665C0D /* ZYXBaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYXBaseOperation.h; sourceTree = "<group>"; };
@@ -238,6 +247,12 @@
 		275282241CC654030009A417 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				27201C601CCA0A0500E4D131 /* NSData+Encryption.h */,
+				27201C611CCA0A0500E4D131 /* NSData+Encryption.m */,
+				27201C621CCA0A0500E4D131 /* NSString+Encryption.h */,
+				27201C631CCA0A0500E4D131 /* NSString+Encryption.m */,
+				27201C641CCA0A0500E4D131 /* NSString+Hashing.h */,
+				27201C651CCA0A0500E4D131 /* NSString+Hashing.m */,
 				275282251CC654370009A417 /* NSData+Base64.h */,
 				275282261CC654370009A417 /* NSData+Base64.m */,
 			);
@@ -384,7 +399,10 @@
 				274C6BB81CC6167A00665C0D /* ZYXBaseOperation.m in Sources */,
 				270764521CC60EEA0005E783 /* AppDelegate.m in Sources */,
 				275282231CC64FF50009A417 /* ZYXRegisterViewController.m in Sources */,
+				27201C671CCA0A0500E4D131 /* NSString+Encryption.m in Sources */,
+				27201C681CCA0A0500E4D131 /* NSString+Hashing.m in Sources */,
 				2707644F1CC60EEA0005E783 /* main.m in Sources */,
+				27201C661CCA0A0500E4D131 /* NSData+Encryption.m in Sources */,
 				275282271CC654370009A417 /* NSData+Base64.m in Sources */,
 				274C6BBF1CC6292F00665C0D /* ZYXDashboardViewController.m in Sources */,
 				274C6BC21CC6294A00665C0D /* ZYXNormalViewController.m in Sources */,
