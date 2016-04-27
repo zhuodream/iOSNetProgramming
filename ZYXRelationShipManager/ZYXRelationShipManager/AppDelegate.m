@@ -12,6 +12,8 @@
 #import "UIAlertView+MKBlockAdditions.h"
 #import "ContactsDetailTableViewController.h"
 
+#define kPushTokenTransmitted @"PushNotificationTokenTransmitted"
+
 @interface AppDelegate ()
 
 @end
@@ -41,6 +43,20 @@
         }
     }
     
+//    BOOL requested = [[NSUserDefaults standardUserDefaults] boolForKey:kPushTokenTransmitted];
+//    if (requested != YES)
+//    {
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] > 8.0)
+        {
+            UIUserNotificationType type = UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound;
+            UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:type categories:nil];
+            [[UIApplication sharedApplication] registerUserNotificationSettings:setting];
+        }
+        else
+        {
+            [[UIApplication sharedApplication] registerForRemoteNotificationTypes:  (UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
+        }
+//    }
     
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     
@@ -119,7 +135,30 @@
     });
     
     NSLog(@"收到通知");
+}
+
+#pragma mark - Remote Notification
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    NSLog(@"注册远程通知");
+    [application registerForRemoteNotifications];
+}
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSString *userId = @"nate@emaildomain.com";
+    NSString *token = [NSString stringWithFormat:@"%@", deviceToken];
     
+    token = [token stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSLog(@"token = %@", token);
+    
+//    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kPushTokenTransmitted];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    NSLog(@"注册远程通知失败");
 }
 
 @end

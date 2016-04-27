@@ -286,7 +286,11 @@
 				TargetAttributes = {
 					2735C23E1CCF501B00E5A2F4 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 863XF2ER6H;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2735C2571CCF501B00E5A2F4 = {
 						CreatedOnToolsVersion = 7.3;
@@ -498,14 +502,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: dengke shi (TCV42J85UH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: dengke shi (TCV42J85UH)";
 				INFOPLIST_FILE = ZYXRelationShipManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXRelationShipManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.TestPush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3eb90819-6c2d-4ea1-8a7f-9866c642844d";
 			};
 			name = Debug;
 		};
@@ -513,14 +517,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: dengke shi (TCV42J85UH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: dengke shi (TCV42J85UH)";
 				INFOPLIST_FILE = ZYXRelationShipManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXRelationShipManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.TestPush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3eb90819-6c2d-4ea1-8a7f-9866c642844d";
 			};
 			name = Release;
 		};
