@@ -56,70 +56,142 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)cancel:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)saveContact:(id)sender {
+    
+    // save our contact
+    BOOL contactAdded = [[ZYXModel sharedModel] addContactWithFirstName:_firstNameField.text
+                                                            lastName:_lastNameField.text
+                                                             company:_companyField.text
+                                                        emailAddress:_emailAddressField.text
+                                                         phoneNumber:_phoneNumberField.text
+                                                             andNote:_noteField.text];
+    if (contactAdded == YES) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"Error"
+                                    message:@"Unable to add contact. Confirm email address doesn't already exist."
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil] show];
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    if (section == 0) {
+        return 3;
+    } else if (section == 1) {
+        return 2;
+    }
+    return 1;
 }
 
-/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // notes section
+    if (indexPath.section == 2) {
+        return 100;
+    }
+    
+    // all other cells are standard height
+    return 44;
+}
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 2) {
+        return @"Notes";
+    }
+    return @"";
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
+    switch (indexPath.section) {
+        case 0:
+            if (indexPath.row == 0) {
+                if (_firstNameField == nil) {
+                    _firstNameField = [[UITextField alloc] initWithFrame:CGRectMake(kFieldTitleWidth,
+                                                                                   2,
+                                                                                   cell.contentView.frame.size.width - kFieldTitleWidth,
+                                                                                   40)];
+                    _firstNameField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+                }
+                
+                cell.textLabel.text = @"First Name";
+                cell.accessoryView = _firstNameField;
+            } else if (indexPath.row == 1) {
+                if (_lastNameField == nil) {
+                    _lastNameField = [[UITextField alloc] initWithFrame:CGRectMake(kFieldTitleWidth,
+                                                                                  2,
+                                                                                  cell.contentView.frame.size.width - kFieldTitleWidth,
+                                                                                  40)];
+                    _lastNameField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+                }
+                
+                cell.textLabel.text = @"Last Name";
+                cell.accessoryView = _lastNameField;
+            } else {
+                if (_companyField == nil) {
+                    _companyField = [[UITextField alloc] initWithFrame:CGRectMake(kFieldTitleWidth,
+                                                                                 2,
+                                                                                 cell.contentView.frame.size.width - kFieldTitleWidth,
+                                                                                 40)];
+                    _companyField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+                }
+                
+                cell.textLabel.text = @"Company";
+                cell.accessoryView = _companyField;
+            }
+            
+            break;
+            
+        case 1:
+            if (indexPath.row == 0) {
+                if (_phoneNumberField == nil) {
+                    _phoneNumberField = [[UITextField alloc] initWithFrame:CGRectMake(kFieldTitleWidth,
+                                                                                     2,
+                                                                                     cell.contentView.frame.size.width - 165,
+                                                                                     40)];
+                    _phoneNumberField.keyboardType = UIKeyboardTypePhonePad;
+                    _phoneNumberField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+                }
+                
+                cell.textLabel.text = @"Phone Number";
+                cell.accessoryView = _phoneNumberField;
+            } else {
+                if (_emailAddressField == nil) {
+                    _emailAddressField = [[UITextField alloc] initWithFrame:CGRectMake(kFieldTitleWidth,
+                                                                                      2,
+                                                                                      cell.contentView.frame.size.width - kFieldTitleWidth,
+                                                                                      40)];
+                    _emailAddressField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+                }
+                
+                cell.textLabel.text = @"Email Address";
+                cell.accessoryView = _emailAddressField;
+            }
+            
+        default:
+            break;
+    }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
-}
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -10,4 +10,11 @@
 
 @implementation ZYXContact
 
+@dynamic firstName;
+@dynamic lastName;
+@dynamic company;
+@dynamic emailAddress;
+@dynamic phoneNumber;
+@dynamic notes;
+
 @end

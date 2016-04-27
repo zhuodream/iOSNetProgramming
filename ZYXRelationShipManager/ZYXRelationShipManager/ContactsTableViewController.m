@@ -9,6 +9,9 @@
 #import "ContactsTableViewController.h"
 #import "ZYXModel.h"
 #import "ZYXContact.h"
+#import "ContactsDetailTableViewController.h"
+
+#import "AddContactTableViewController.h"
 
 @interface ContactsTableViewController ()
 
@@ -55,7 +58,9 @@
 #pragma mark - UI Response
 - (void)addContact:(id)sender
 {
-    
+    AddContactTableViewController *addVC = [[AddContactTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:addVC];
+    [self.navigationController presentViewController:nc animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,5 +96,16 @@
     
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    ZYXContact *contact = [self.contacts objectAtIndex:indexPath.row];
+    ContactsDetailTableViewController *detailVC = [[ContactsDetailTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    detailVC.contact = contact;
+    
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
+
 
 @end

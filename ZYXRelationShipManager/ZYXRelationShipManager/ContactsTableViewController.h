@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZYXContact.h"
 
-@interface ContactsTableViewController : UITableViewController
+@interface ContactsTableViewController : UITableViewController<UIActionSheetDelegate>
+
+@property(nonatomic,strong) ZYXContact *contact;
+@property(nonatomic,assign) BOOL presentedModally;
 
 @end

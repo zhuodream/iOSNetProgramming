@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "ZYXModel.h"
+#import "ContactsTableViewController.h"
+#import "UIAlertView+MKBlockAdditions.h"
+#import "ContactsDetailTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +21,37 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UILocalNotification *localNotification = [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    if (localNotification != nil)
+    {
+        NSDictionary *userInfo = localNotification.userInfo;
+        
+        NSString *action = [userInfo objectForKey:@"action"];
+        ZYXContact *contact = [[ZYXModel sharedModel] contactWithEmailAddress:[userInfo objectForKey:@"emailAddress"]];
+        if ([action isEqualToString:@"Call"])
+        {
+            NSString *phone = [NSString stringWithFormat:@"tel:%@", contact.phoneNumber];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone]];
+        }
+        else if ([action isEqualToString:@"Email"])
+        {
+            NSString *email = [NSString stringWithFormat:@"mailto:%@", contact.emailAddress];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
+        }
+    }
+    
+    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    ContactsTableViewController *contactsVC = [[ContactsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:contactsVC];
+    
+    self.window.rootViewController = self.navigationController;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -39,7 +74,52 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[ZYXModel sharedModel] saveContext];
+}
+
+//接收到本地通知，该选项只有在已打开应用的情况下回走
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        NSDictionary *userInfo = notification.userInfo;
+        
+        NSString *action = [userInfo objectForKey:@"action"];
+        ZYXContact *contact = [[ZYXModel sharedModel] contactWithEmailAddress:[userInfo objectForKey:@"emailAddress"]];
+        
+        [UIAlertView alertViewWithTitle:@"Reminder" message:notification.alertBody cancelButtonTitle:@"Cancel" otherButtonTitles:[NSArray arrayWithObjects:@"View Contact", action, nil] onDismiss:^(int buttonIndex) {
+            if (buttonIndex == 0)
+            {
+                ContactsDetailTableViewController *contactVC = [[ContactsDetailTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+                contactVC.contact = contact;
+                contactVC.presentedModally = YES;
+                
+                UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:contactVC];
+                [self.navigationController presentViewController:nc animated:YES completion:nil];
+            }
+            else if (buttonIndex == 1)
+            {
+                if ([action isEqualToString:@"Call"])
+                {
+                    NSString *phone = [NSString stringWithFormat:@"tel:%@", contact.phoneNumber];
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone]];
+                }
+                else if ([action isEqualToString:@"Email"])
+                {
+                    NSString *email = [NSString stringWithFormat:@"mailto:%@", contact.emailAddress];
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
+                }
+            }
+            
+            [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+            
+        } onCancel:^{
+            [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+        }];
+    });
+    
+    NSLog(@"收到通知");
+    
 }
 
 @end
