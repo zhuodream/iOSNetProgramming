@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BZj-cK-XKd">
+                                <rect key="frame" x="20" y="60" width="560" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="WpR-md-OkC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCJ-b4-dl2">
+                                <rect key="frame" x="40" y="310" width="160" height="30"/>
+                                <state key="normal" title="连接蓝牙"/>
+                                <connections>
+                                    <action selector="connect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qgN-cW-1uV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tML-8r-05M">
+                                <rect key="frame" x="220" y="310" width="160" height="30"/>
+                                <state key="normal" title="选择图片"/>
+                                <connections>
+                                    <action selector="selectedPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S0h-Cy-rQ7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hod-Cn-wIE">
+                                <rect key="frame" x="400" y="310" width="160" height="30"/>
+                                <state key="normal" title="发送图片"/>
+                                <connections>
+                                    <action selector="send:" destination="BYZ-38-t0r" eventType="touchUpInside" id="suB-f8-clV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uCJ-b4-dl2" firstAttribute="top" secondItem="BZj-cK-XKd" secondAttribute="bottom" constant="100" id="4FL-So-cug"/>
+                            <constraint firstItem="Hod-Cn-wIE" firstAttribute="height" secondItem="uCJ-b4-dl2" secondAttribute="height" id="Dor-54-lzk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hod-Cn-wIE" secondAttribute="trailing" constant="20" id="Dr6-oE-AmZ"/>
+                            <constraint firstItem="tML-8r-05M" firstAttribute="width" secondItem="uCJ-b4-dl2" secondAttribute="width" id="FJh-kb-Efr"/>
+                            <constraint firstItem="tML-8r-05M" firstAttribute="leading" secondItem="uCJ-b4-dl2" secondAttribute="trailing" constant="20" id="J0x-iS-t6A"/>
+                            <constraint firstAttribute="trailing" secondItem="BZj-cK-XKd" secondAttribute="trailing" constant="20" id="KU9-z6-9Tw"/>
+                            <constraint firstItem="BZj-cK-XKd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="LGh-vT-2Mf"/>
+                            <constraint firstItem="Hod-Cn-wIE" firstAttribute="leading" secondItem="tML-8r-05M" secondAttribute="trailing" constant="20" id="ZTx-SO-zDl"/>
+                            <constraint firstItem="tML-8r-05M" firstAttribute="top" secondItem="BZj-cK-XKd" secondAttribute="bottom" constant="100" id="Zse-iy-Cv9"/>
+                            <constraint firstItem="tML-8r-05M" firstAttribute="height" secondItem="uCJ-b4-dl2" secondAttribute="height" id="dBu-CO-5hm"/>
+                            <constraint firstItem="Hod-Cn-wIE" firstAttribute="top" secondItem="BZj-cK-XKd" secondAttribute="bottom" constant="100" id="i1d-9f-ERU"/>
+                            <constraint firstItem="Hod-Cn-wIE" firstAttribute="width" secondItem="uCJ-b4-dl2" secondAttribute="width" id="m00-4W-51c"/>
+                            <constraint firstItem="uCJ-b4-dl2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="pWf-fo-cDk"/>
+                            <constraint firstItem="BZj-cK-XKd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="pwe-Eb-vLD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customIV" destination="BZj-cK-XKd" id="eoX-Ar-oWM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+</document>

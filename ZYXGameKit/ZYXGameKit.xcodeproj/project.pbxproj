@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27FE7D821CE30C3800A4E9B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FE7D811CE30C3800A4E9B9 /* main.m */; };
+		27FE7D851CE30C3800A4E9B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FE7D841CE30C3800A4E9B9 /* AppDelegate.m */; };
+		27FE7D881CE30C3800A4E9B9 /* GALobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FE7D871CE30C3800A4E9B9 /* GALobbyViewController.m */; };
+		27FE7D8D1CE30C3800A4E9B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FE7D8C1CE30C3800A4E9B9 /* Assets.xcassets */; };
+		27FE7D901CE30C3800A4E9B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FE7D8E1CE30C3800A4E9B9 /* LaunchScreen.storyboard */; };
+		27FE7D9B1CE30C3800A4E9B9 /* ZYXGameKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FE7D9A1CE30C3800A4E9B9 /* ZYXGameKitTests.m */; };
+		27FE7DA61CE30C3800A4E9B9 /* ZYXGameKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FE7DA51CE30C3800A4E9B9 /* ZYXGameKitUITests.m */; };
+		27FE7DB41CE30CD900A4E9B9 /* GALobbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27FE7DB31CE30CD900A4E9B9 /* GALobbyViewController.xib */; };
+		27FE7DB91CE30D8400A4E9B9 /* GAAuctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FE7DB81CE30D8400A4E9B9 /* GAAuctionViewController.m */; };
+		27FE7DBC1CE30DD200A4E9B9 /* GAPeer.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FE7DBB1CE30DD200A4E9B9 /* GAPeer.m */; };
+		27FE7DBF1CE3121000A4E9B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27FE7DC11CE3121000A4E9B9 /* InfoPlist.strings */; };
+		27FE7DC51CE312D900A4E9B9 /* GANetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 27FE7DC41CE312D900A4E9B9 /* GANetworkingManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27FE7D971CE30C3800A4E9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27FE7D751CE30C3800A4E9B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27FE7D7C1CE30C3800A4E9B9;
+			remoteInfo = ZYXGameKit;
+		};
+		27FE7DA21CE30C3800A4E9B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27FE7D751CE30C3800A4E9B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27FE7D7C1CE30C3800A4E9B9;
+			remoteInfo = ZYXGameKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27FE7D7D1CE30C3800A4E9B9 /* ZYXGameKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYXGameKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FE7D811CE30C3800A4E9B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		27FE7D831CE30C3800A4E9B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		27FE7D841CE30C3800A4E9B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		27FE7D861CE30C3800A4E9B9 /* GALobbyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GALobbyViewController.h; sourceTree = "<group>"; };
+		27FE7D871CE30C3800A4E9B9 /* GALobbyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GALobbyViewController.m; sourceTree = "<group>"; };
+		27FE7D8C1CE30C3800A4E9B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27FE7D8F1CE30C3800A4E9B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27FE7D911CE30C3800A4E9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27FE7D961CE30C3800A4E9B9 /* ZYXGameKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYXGameKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FE7D9A1CE30C3800A4E9B9 /* ZYXGameKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYXGameKitTests.m; sourceTree = "<group>"; };
+		27FE7D9C1CE30C3800A4E9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27FE7DA11CE30C3800A4E9B9 /* ZYXGameKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYXGameKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FE7DA51CE30C3800A4E9B9 /* ZYXGameKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYXGameKitUITests.m; sourceTree = "<group>"; };
+		27FE7DA71CE30C3800A4E9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27FE7DB31CE30CD900A4E9B9 /* GALobbyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GALobbyViewController.xib; sourceTree = "<group>"; };
+		27FE7DB71CE30D8400A4E9B9 /* GAAuctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAAuctionViewController.h; sourceTree = "<group>"; };
+		27FE7DB81CE30D8400A4E9B9 /* GAAuctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAAuctionViewController.m; sourceTree = "<group>"; };
+		27FE7DBA1CE30DD200A4E9B9 /* GAPeer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAPeer.h; sourceTree = "<group>"; };
+		27FE7DBB1CE30DD200A4E9B9 /* GAPeer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAPeer.m; sourceTree = "<group>"; };
+		27FE7DC01CE3121000A4E9B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27FE7DC21CE3121A00A4E9B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		27FE7DC31CE312D900A4E9B9 /* GANetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANetworkingManager.h; sourceTree = "<group>"; };
+		27FE7DC41CE312D900A4E9B9 /* GANetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GANetworkingManager.m; sourceTree = "<group>"; };
+		27FE7DC61CE312EB00A4E9B9 /* GANetworkingPackets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GANetworkingPackets.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27FE7D7A1CE30C3800A4E9B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FE7D931CE30C3800A4E9B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FE7D9E1CE30C3800A4E9B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27FE7D741CE30C3800A4E9B9 = {
+			isa = PBXGroup;
+			children = (
+				27FE7D7F1CE30C3800A4E9B9 /* ZYXGameKit */,
+				27FE7D991CE30C3800A4E9B9 /* ZYXGameKitTests */,
+				27FE7DA41CE30C3800A4E9B9 /* ZYXGameKitUITests */,
+				27FE7D7E1CE30C3800A4E9B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27FE7D7E1CE30C3800A4E9B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27FE7D7D1CE30C3800A4E9B9 /* ZYXGameKit.app */,
+				27FE7D961CE30C3800A4E9B9 /* ZYXGameKitTests.xctest */,
+				27FE7DA11CE30C3800A4E9B9 /* ZYXGameKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27FE7D7F1CE30C3800A4E9B9 /* ZYXGameKit */ = {
+			isa = PBXGroup;
+			children = (
+				27FE7DB51CE30D4E00A4E9B9 /* Networking */,
+				27FE7DB61CE30D5600A4E9B9 /* User Interface */,
+				27FE7D831CE30C3800A4E9B9 /* AppDelegate.h */,
+				27FE7D841CE30C3800A4E9B9 /* AppDelegate.m */,
+				27FE7D8C1CE30C3800A4E9B9 /* Assets.xcassets */,
+				27FE7D8E1CE30C3800A4E9B9 /* LaunchScreen.storyboard */,
+				27FE7D911CE30C3800A4E9B9 /* Info.plist */,
+				27FE7D801CE30C3800A4E9B9 /* Supporting Files */,
+			);
+			path = ZYXGameKit;
+			sourceTree = "<group>";
+		};
+		27FE7D801CE30C3800A4E9B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				27FE7D811CE30C3800A4E9B9 /* main.m */,
+				27FE7DC11CE3121000A4E9B9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27FE7D991CE30C3800A4E9B9 /* ZYXGameKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				27FE7D9A1CE30C3800A4E9B9 /* ZYXGameKitTests.m */,
+				27FE7D9C1CE30C3800A4E9B9 /* Info.plist */,
+			);
+			path = ZYXGameKitTests;
+			sourceTree = "<group>";
+		};
+		27FE7DA41CE30C3800A4E9B9 /* ZYXGameKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				27FE7DA51CE30C3800A4E9B9 /* ZYXGameKitUITests.m */,
+				27FE7DA71CE30C3800A4E9B9 /* Info.plist */,
+			);
+			path = ZYXGameKitUITests;
+			sourceTree = "<group>";
+		};
+		27FE7DB51CE30D4E00A4E9B9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				27FE7DBA1CE30DD200A4E9B9 /* GAPeer.h */,
+				27FE7DBB1CE30DD200A4E9B9 /* GAPeer.m */,
+				27FE7DC31CE312D900A4E9B9 /* GANetworkingManager.h */,
+				27FE7DC41CE312D900A4E9B9 /* GANetworkingManager.m */,
+				27FE7DC61CE312EB00A4E9B9 /* GANetworkingPackets.h */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		27FE7DB61CE30D5600A4E9B9 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				27FE7D861CE30C3800A4E9B9 /* GALobbyViewController.h */,
+				27FE7D871CE30C3800A4E9B9 /* GALobbyViewController.m */,
+				27FE7DB31CE30CD900A4E9B9 /* GALobbyViewController.xib */,
+				27FE7DB71CE30D8400A4E9B9 /* GAAuctionViewController.h */,
+				27FE7DB81CE30D8400A4E9B9 /* GAAuctionViewController.m */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27FE7D7C1CE30C3800A4E9B9 /* ZYXGameKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27FE7DAA1CE30C3800A4E9B9 /* Build configuration list for PBXNativeTarget "ZYXGameKit" */;
+			buildPhases = (
+				27FE7D791CE30C3800A4E9B9 /* Sources */,
+				27FE7D7A1CE30C3800A4E9B9 /* Frameworks */,
+				27FE7D7B1CE30C3800A4E9B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZYXGameKit;
+			productName = ZYXGameKit;
+			productReference = 27FE7D7D1CE30C3800A4E9B9 /* ZYXGameKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27FE7D951CE30C3800A4E9B9 /* ZYXGameKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27FE7DAD1CE30C3800A4E9B9 /* Build configuration list for PBXNativeTarget "ZYXGameKitTests" */;
+			buildPhases = (
+				27FE7D921CE30C3800A4E9B9 /* Sources */,
+				27FE7D931CE30C3800A4E9B9 /* Frameworks */,
+				27FE7D941CE30C3800A4E9B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27FE7D981CE30C3800A4E9B9 /* PBXTargetDependency */,
+			);
+			name = ZYXGameKitTests;
+			productName = ZYXGameKitTests;
+			productReference = 27FE7D961CE30C3800A4E9B9 /* ZYXGameKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27FE7DA01CE30C3800A4E9B9 /* ZYXGameKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27FE7DB01CE30C3800A4E9B9 /* Build configuration list for PBXNativeTarget "ZYXGameKitUITests" */;
+			buildPhases = (
+				27FE7D9D1CE30C3800A4E9B9 /* Sources */,
+				27FE7D9E1CE30C3800A4E9B9 /* Frameworks */,
+				27FE7D9F1CE30C3800A4E9B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27FE7DA31CE30C3800A4E9B9 /* PBXTargetDependency */,
+			);
+			name = ZYXGameKitUITests;
+			productName = ZYXGameKitUITests;
+			productReference = 27FE7DA11CE30C3800A4E9B9 /* ZYXGameKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27FE7D751CE30C3800A4E9B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "卓酉鑫";
+				TargetAttributes = {
+					27FE7D7C1CE30C3800A4E9B9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = A238RS6MU5;
+					};
+					27FE7D951CE30C3800A4E9B9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 27FE7D7C1CE30C3800A4E9B9;
+					};
+					27FE7DA01CE30C3800A4E9B9 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 27FE7D7C1CE30C3800A4E9B9;
+					};
+				};
+			};
+			buildConfigurationList = 27FE7D781CE30C3800A4E9B9 /* Build configuration list for PBXProject "ZYXGameKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27FE7D741CE30C3800A4E9B9;
+			productRefGroup = 27FE7D7E1CE30C3800A4E9B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27FE7D7C1CE30C3800A4E9B9 /* ZYXGameKit */,
+				27FE7D951CE30C3800A4E9B9 /* ZYXGameKitTests */,
+				27FE7DA01CE30C3800A4E9B9 /* ZYXGameKitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27FE7D7B1CE30C3800A4E9B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FE7D901CE30C3800A4E9B9 /* LaunchScreen.storyboard in Resources */,
+				27FE7DBF1CE3121000A4E9B9 /* InfoPlist.strings in Resources */,
+				27FE7DB41CE30CD900A4E9B9 /* GALobbyViewController.xib in Resources */,
+				27FE7D8D1CE30C3800A4E9B9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FE7D941CE30C3800A4E9B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FE7D9F1CE30C3800A4E9B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27FE7D791CE30C3800A4E9B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FE7D881CE30C3800A4E9B9 /* GALobbyViewController.m in Sources */,
+				27FE7D851CE30C3800A4E9B9 /* AppDelegate.m in Sources */,
+				27FE7DB91CE30D8400A4E9B9 /* GAAuctionViewController.m in Sources */,
+				27FE7DC51CE312D900A4E9B9 /* GANetworkingManager.m in Sources */,
+				27FE7D821CE30C3800A4E9B9 /* main.m in Sources */,
+				27FE7DBC1CE30DD200A4E9B9 /* GAPeer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FE7D921CE30C3800A4E9B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FE7D9B1CE30C3800A4E9B9 /* ZYXGameKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FE7D9D1CE30C3800A4E9B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FE7DA61CE30C3800A4E9B9 /* ZYXGameKitUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27FE7D981CE30C3800A4E9B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27FE7D7C1CE30C3800A4E9B9 /* ZYXGameKit */;
+			targetProxy = 27FE7D971CE30C3800A4E9B9 /* PBXContainerItemProxy */;
+		};
+		27FE7DA31CE30C3800A4E9B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27FE7D7C1CE30C3800A4E9B9 /* ZYXGameKit */;
+			targetProxy = 27FE7DA21CE30C3800A4E9B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27FE7D8E1CE30C3800A4E9B9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27FE7D8F1CE30C3800A4E9B9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		27FE7DC11CE3121000A4E9B9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27FE7DC01CE3121000A4E9B9 /* en */,
+				27FE7DC21CE3121A00A4E9B9 /* Base */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27FE7DA81CE30C3800A4E9B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27FE7DA91CE30C3800A4E9B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27FE7DAB1CE30C3800A4E9B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ZYXGameKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXHomepwner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		27FE7DAC1CE30C3800A4E9B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ZYXGameKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXFacebookTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		27FE7DAE1CE30C3800A4E9B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZYXGameKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXGameKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYXGameKit.app/ZYXGameKit";
+			};
+			name = Debug;
+		};
+		27FE7DAF1CE30C3800A4E9B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZYXGameKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXGameKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYXGameKit.app/ZYXGameKit";
+			};
+			name = Release;
+		};
+		27FE7DB11CE30C3800A4E9B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZYXGameKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXGameKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZYXGameKit;
+			};
+			name = Debug;
+		};
+		27FE7DB21CE30C3800A4E9B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZYXGameKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhuo.ZYXGameKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZYXGameKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27FE7D781CE30C3800A4E9B9 /* Build configuration list for PBXProject "ZYXGameKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27FE7DA81CE30C3800A4E9B9 /* Debug */,
+				27FE7DA91CE30C3800A4E9B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27FE7DAA1CE30C3800A4E9B9 /* Build configuration list for PBXNativeTarget "ZYXGameKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27FE7DAB1CE30C3800A4E9B9 /* Debug */,
+				27FE7DAC1CE30C3800A4E9B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27FE7DAD1CE30C3800A4E9B9 /* Build configuration list for PBXNativeTarget "ZYXGameKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27FE7DAE1CE30C3800A4E9B9 /* Debug */,
+				27FE7DAF1CE30C3800A4E9B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27FE7DB01CE30C3800A4E9B9 /* Build configuration list for PBXNativeTarget "ZYXGameKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27FE7DB11CE30C3800A4E9B9 /* Debug */,
+				27FE7DB21CE30C3800A4E9B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27FE7D751CE30C3800A4E9B9 /* Project object */;
+}
