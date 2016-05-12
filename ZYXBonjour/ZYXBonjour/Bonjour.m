@@ -294,7 +294,7 @@ static Bonjour *_instance = nil;
     
     if (port == 0)
     {
-        NSData *addr = (__bridge NSData *)CFSocketCopyAddress(ipv4socket);
+        NSData *addr = (__bridge_transfer NSData *)CFSocketCopyAddress(ipv4socket);
         memcpy(&addr4, [addr bytes], [addr length]);
         port = ntohs(addr4.sin_port);
     }
@@ -393,15 +393,15 @@ static void BonjourServerAcceptCallBack (CFSocketRef socket, CFSocketCallBackTyp
             close(socketHandle);
         }
         
-        if (readStream)
-        {
-            CFRelease(readStream);
-        }
-        
-        if (writeStream)
-        {
-            CFRelease(writeStream);
-        }
+//        if (readStream)
+//        {
+//            CFRelease(readStream);
+//        }
+//        
+//        if (writeStream)
+//        {
+//            CFRelease(writeStream);
+//        }
     }
 }
 

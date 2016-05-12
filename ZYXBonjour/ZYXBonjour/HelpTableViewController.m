@@ -102,7 +102,7 @@
         
         return inputCell;
     }
-    else if (indexPath.section == 1)
+    else
     {
         if (actionCell == nil)
         {
@@ -126,8 +126,6 @@
         
         return actionCell;
     }
-    
-    return nil;
 }
 
 
