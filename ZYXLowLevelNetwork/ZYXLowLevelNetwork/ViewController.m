@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "ZYXBSDSocketController.h"
+#import "ZYXCFNetworkController.h"
+#import "ZYXNSStreamController.h"
 
 #define kWarehouseFeedHost @"warehouse.example.com"
 #define kWarehouseFeedPort 1102
@@ -44,6 +46,23 @@
             ZYXBSDSocketController *bsdSocketController = [[ZYXBSDSocketController alloc] initWithURLString:kWarehouseFeedHost port:kWarehouseFeedPort];
             bsdSocketController.delegate = self;
             [bsdSocketController start];
+            break;
+        }
+            // CFNetwork
+        case 1: {
+            ZYXCFNetworkController *cfNetworkController = [[ZYXCFNetworkController alloc] initWithURLString:kWarehouseFeedHost port:kWarehouseFeedPort];
+            cfNetworkController.delegate = self;
+            
+            [cfNetworkController start];
+            break;
+        }
+            
+            // NSStream
+        case 2: {
+            ZYXNSStreamController *nsStreamController = [[ZYXNSStreamController alloc] initWithURLString:kWarehouseFeedHost port:kWarehouseFeedPort];
+            nsStreamController.delegate = self;
+            
+            [nsStreamController start];
             break;
         }
             
