@@ -383,8 +383,8 @@ static void BonjourServerAcceptCallBack (CFSocketRef socket, CFSocketCallBackTyp
             CFReadStreamSetProperty(readStream, kCFStreamPropertyShouldCloseNativeSocket, kCFBooleanTrue);
             CFWriteStreamSetProperty(writeStream, kCFStreamPropertyShouldCloseNativeSocket, kCFBooleanTrue);
             
-            NSInputStream *is = (__bridge NSInputStream*)readStream;
-            NSOutputStream *os = (__bridge NSOutputStream*)writeStream;
+            NSInputStream *is = (__bridge_transfer NSInputStream*)readStream;
+            NSOutputStream *os = (__bridge_transfer NSOutputStream*)writeStream;
             
             [server handleNewConnectionWithInputStream:is outputStream:os];
         }

@@ -282,7 +282,6 @@ static BonjourBrowser *_instance = nil;
                             receiveData = nil;
                             bytesRead = nil;
                         }
-                        
                     }
                 } else {
                     NSLog(@"No data found in buffer.");
