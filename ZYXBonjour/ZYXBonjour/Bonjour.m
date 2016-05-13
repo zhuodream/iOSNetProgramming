@@ -392,7 +392,7 @@ static void BonjourServerAcceptCallBack (CFSocketRef socket, CFSocketCallBackTyp
         {
             close(socketHandle);
         }
-        
+//        
 //        if (readStream)
 //        {
 //            CFRelease(readStream);
